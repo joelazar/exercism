@@ -1,17 +1,10 @@
-# Isogram
+# Reverse String
 
-Determine if a word or phrase is an isogram.
+Reverse a string
 
-An isogram (also known as a "nonpattern word") is a word or phrase without a repeating letter, however spaces and hyphens are allowed to appear multiple times.
-
-Examples of isograms:
-
-- lumberjacks
-- background
-- downstream
-- six-year-old
-
-The word *isograms*, however, is not an isogram, because the s repeats.
+For example:
+input: "cool"
+output: "looc"
 
 ## Exception messages
 
@@ -29,7 +22,7 @@ raise Exception("Meaningful message indicating the source of the error")
 
 ## Submitting Exercises
 
-Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/isogram` directory.
+Note that, when trying to submit an exercise, make sure the solution is in the `$EXERCISM_WORKSPACE/python/reverse-string` directory.
 
 You can find your Exercism workspace by running `exercism debug` and looking for the line that starts with `Workspace`.
 
@@ -38,7 +31,7 @@ please see the [help page](http://exercism.io/languages/python).
 
 ## Source
 
-Wikipedia [https://en.wikipedia.org/wiki/Isogram](https://en.wikipedia.org/wiki/Isogram)
+Introductory challenge to reverse an input string [https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb](https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
