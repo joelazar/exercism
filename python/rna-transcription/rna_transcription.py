@@ -1,7 +1,7 @@
 def to_rna(dna_strand):
     dna_to_rna = {'G':'C','C':'G','T':'A','A':'U'} 
     rna = ""
-    for c in list(dna_strand):
+    for c in dna_strand:
         try:
             rna += dna_to_rna[c] 
         except:
