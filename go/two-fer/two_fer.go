@@ -2,10 +2,11 @@ package twofer
 
 import "fmt"
 
-const TEXT string = "One for %s, one for me."
+const text string = "One for %s, one for me."
 
+// ShareWith - One for X, one for me.
 func ShareWith(name string) string {
-	if len(name) == 0 {
+	if name == "" {
 		name = "you"
 	}
 	return fmt.Sprintf(TEXT, name)
