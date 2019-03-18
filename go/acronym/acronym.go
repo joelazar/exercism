@@ -2,12 +2,13 @@ package acronym
 
 import "strings"
 
+// Abbreviate - abbreviate
 func Abbreviate(s string) string {
 
 	var acronym string
-	bigwords_withouthyphen := strings.Fields(strings.ToUpper(strings.Replace(s, "-", " ", -1)))
+	capitalWords := strings.Fields(strings.ToUpper(strings.Replace(s, "-", " ", -1)))
 
-	for _, r := range bigwords_withouthyphen {
+	for _, r := range capitalWords {
 		acronym += string(r[0])
 	}
 
