@@ -2,6 +2,7 @@ package raindrops
 
 import "strconv"
 
+// Convert - converts a number to strings of pling/plang/plong
 func Convert(input int) string {
 	var output string
 
