@@ -1,21 +1,23 @@
 package isogram
 
+import "sort"
+import "strings"
 import "unicode"
 
 // IsIsogram - this function checks if a word is isogram or not
 func IsIsogram(input string) bool {
-	var charList []rune
-	for _, inputChar := range input {
-		if inputChar == '-' || inputChar == ' ' {
+	runeList := []rune(strings.ToLower(input))
+	sort.Slice(runeList, func(i, j int) bool {
+		return runeList[i] < runeList[j]
+	})
+
+	for i := 0; i < len(runeList)-1; i++ {
+		if !unicode.IsLetter(runeList[i]) {
 			continue
 		}
-		lowerCasedChar := unicode.ToLower(inputChar)
-		for _, char := range charList {
-			if lowerCasedChar == char {
-				return false
-			}
+		if runeList[i] == runeList[i+1] {
+			return false
 		}
-		charList = append(charList, lowerCasedChar)
 	}
 	return true
 }
