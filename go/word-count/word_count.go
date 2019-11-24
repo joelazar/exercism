@@ -3,7 +3,8 @@ package wordcount
 import "strings"
 import "unicode"
 
-type Frequency map[string]int // Using this return type.
+// Frequency - using this as a return type.
+type Frequency map[string]int
 
 var freqMap Frequency
 
@@ -21,12 +22,13 @@ func filterApostrophe(s string) string {
 	return s
 }
 
+// WordCount - counts how many times is a word can be found in a sentence.
 func WordCount(sentence string) Frequency {
 	freqMap = make(Frequency)
 	words := strings.FieldsFunc(sentence, f)
 	for _, word := range words {
 		word = filterApostrophe(strings.ToLower(word))
-		freqMap[word] += 1
+		freqMap[word]++
 	}
 
 	return freqMap
