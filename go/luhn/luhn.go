@@ -6,7 +6,7 @@ import (
 )
 
 func Valid(input string) bool {
-	input = strings.Replace(input, " ", "", -1)
+	input = strings.ReplaceAll(input, " ", "")
 
 	if len(input) < 2 {
 		return false

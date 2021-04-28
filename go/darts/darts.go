@@ -10,7 +10,6 @@ const (
 
 // Score - calculate the scores by the given dart coordinates
 func Score(x, y float64) int {
-
 	squareroot := math.Sqrt(math.Pow(x, 2) + math.Pow(y, 2))
 	if squareroot > outerCircleRadius {
 		return 0
